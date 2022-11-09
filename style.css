@@ -720,6 +720,7 @@ span{
 .contact__input{
     width: 100%;
     background-color: var(--body-color);
+    color: #fff;
     box-shadow: inset 5px 5px 2px #030411,
     inset -5px -5px 2px #0a0c36;
     border-radius: 5px;
@@ -775,6 +776,11 @@ span{
 .footer__subtitle,
 .footer__link{
     color:#fff;
+}
+#msg{
+    color: var(--first-color);
+    margin-top: -40px;
+    display: block;
 }
 
 /* Media queries */
