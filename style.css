@@ -83,6 +83,7 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4{
@@ -152,30 +153,40 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-.nav__logo{
+.nav__logo p{
+    color: #fff;
     font-family: MonteCarlo, 'Poppins', sans-serif;
     font-weight: var(--font-medium);
+    font-weight: 800;
+    transition: .4s;
+    font-size: 1.5em;
 }
 span{
     color: var(--first-color);
 }
-.nav__logo,
+.nav__logo span{
+    color: var(--first-color);
+    font-weight: 800;
+    transition: .4s;
+    font-size: 1.52em;
+}
+
+.nav__logo p:hover{
+    color: var(--first-color);
+}
+.nav__logo span:hover{
+    color: #fff;
+}
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
-}
-
-.nav__logo:hover{
-    color: var(--first-color);
-}
-
-.nav__toggle{
     font-size: 1.1rem;
     cursor: pointer;
 }
 .nav__toggle:hover{
     color: var(--first-color);
 }
+
 
 @media screen and (max-width: 767px){
     .nav__menu{
@@ -201,12 +212,13 @@ span{
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: #fff;
+    color: #fff !important;
     font-weight: var(--font-medium);
+    transition: .4s;
 }
 
 .nav__link:hover{
-    color: var(--first-color);
+    color: var(--first-color) !important;
 }
 
 .nav__icon{
@@ -247,7 +259,9 @@ span{
     grid-template-columns: .5fr 3fr;
     padding-top: 3.5rem;
     align-items: center;
+    position: relative;
 }
+
 
 .home__social{
     display: grid;
@@ -258,29 +272,80 @@ span{
 .home__social-icon{
     font-size: 1.25rem;
     color: var(--first-color);
+    transition: .4s;
 }
 
 .home__social-icon:hover{
     color: var(--first-color-alt);
 }
 
+.home__social-icon:hover{
+    color: var(--first-color-alt);
+}
+.blobs-1{
+    height: 15em;
+    width: 15em;
+    opacity: 5%;
+    background-color: var(--first-color);
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    border-radius: 60% 40% 30% 70%/60% 20% 70% 40%;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+.blobs-2{
+    height: 5em;
+    width: 5em;
+    opacity: 5%;
+    background-color: var(--first-color);
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    border-radius: 60% 20% 30% 70%/60% 20% 70% 40%;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+.blobs-3{
+    height: 10em;
+    width: 10em;
+    opacity: 5%;
+    background-color: var(--first-color);
+    position: absolute;
+    top: -15%;
+    left: 200%;
+    border-radius: 30% 20% 50% 70%/60% 20% 70% 40%;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+.blobs-4{
+    height: 8em;
+    width: 8em;
+    opacity: 5%;
+    background-color: var(--first-color);
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border-radius: 60% 40% 30% 70%/60% 20% 70% 40%;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
 
 .border-container{
-    height: 200px;
-    width: 150px;
-    position: relative;
-    border-left: 5px solid var(--first-color);
-    border-top: 5px solid var(--first-color);
-    border-radius: 5px;
+    height: 25em;
+    width: 15em;
+    background-color: var(--first-color);
     margin-bottom: var(--mb-0-75);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
 .first-image{
     height: 200px;
-    width: 150px;
+    width: 120px;
     position: absolute;
-    top: 5px;
-    left: 5px;
-    border-radius: 5px;
+    top: 18%;
+    left: 55%;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    box-shadow: 0 20px 2px 5px #00000033;
     margin-bottom: var(--mb-0-75);
 }
 
@@ -335,6 +400,7 @@ span{
     padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
+    transition: .4s;
 }
 
 .button:hover{
@@ -350,6 +416,7 @@ span{
 .button--white{
     background-color: #fff;
     color: var(--first-color);
+    transition: .4s;
 }
 
 .button--white:hover{
@@ -369,6 +436,7 @@ span{
     padding: 0;
     background-color: transparent;
     color: var(--first-color);
+    transition: .4s;
 }
 
 .button--link:hover{
@@ -380,11 +448,25 @@ span{
 }
 /* About */
 .about__img{
-    width: 200px;
+    width: 250px;
     border-radius: .5rem;
     margin: 20px auto;
     justify-content: center;
     align-self: center;
+    box-shadow: 0 20px 5px 5px #00000033;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+@keyframes animate {
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius:60% 40% 30% 70%/60% 30% 70% 40%;
+    }
 }
 
 .about__description{
@@ -679,8 +761,12 @@ span{
 
 /* Contact Me */
 .contact__inputs-details{
-    border: 1px solid var(--first-color);
+    box-shadow: 0 2px 4px var(--first-color);
     border-radius: .5rem;
+    transition: .4s;
+}
+.contact__inputs-details:hover{
+    box-shadow: 0 2px 8px var(--first-color);
 }
 .contact__container{
     row-gap: 3rem;
@@ -746,8 +832,14 @@ span{
 }
 
 .footer__title{
+    display: inline-block;
     font-size: var(--h1-font-size);
     margin-bottom: var(--mb-0-25);
+    transition: .4s;
+}
+.footer__title:hover{
+    color: var(--body-color);
+    cursor: pointer;
 }
 
 .footer__subtitle{
@@ -759,10 +851,12 @@ span{
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
+    font-weight: var(--font-semi-bold);
+    transition: .4s;
 }
 
 .footer__link:hover{
-    color: var(--first-color-lighter);
+    color: var(--body-color);
 }
 
 .footer__copy{
@@ -784,7 +878,7 @@ span{
 }
 
 /* Media queries */
-@media screen and (max-width: 350px){
+@media screen and (min-width: 350px){
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -796,7 +890,20 @@ span{
     .nav__list{
         column-gap: 0;
     }
-
+    .border-container{
+        height: 18em;
+        width: 12em;
+    }
+    .first-image{
+        height: 250px;
+        width: 200px;
+        top: 10%;
+        left: 25%;
+    }
+    .blobs-3{
+        top: -15%;
+        left: 70%;
+    }
     .home__content{
         grid-template-columns: .25fr 3fr;
     }
@@ -827,9 +934,20 @@ span{
         .home__data{
             grid-column: initial;
         }
+        
         .border-container{
             order: 1;
             justify-content: center;
+        }
+        .border-container{
+            height: 18em;
+            width: 12em;
+        }
+        .first-image{
+            height: 250px;
+            width: 200px;
+            top: 15%;
+            left: 60%;
         }
         .portfolio__content{
             padding: 45px;
