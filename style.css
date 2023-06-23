@@ -330,14 +330,6 @@ span{
     animation: animate 5s ease-in-out infinite;
     transition: all 1s ease-in-out;
 }
-
-.border-container{
-    height: 25em;
-    width: 15em;
-    background-color: var(--first-color);
-    margin-bottom: var(--mb-0-75);
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-}
 .first-image{
     height: 200px;
     width: 120px;
