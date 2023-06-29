@@ -282,54 +282,6 @@ span{
 .home__social-icon:hover{
     color: var(--first-color-alt);
 }
-.blobs-1{
-    height: 15em;
-    width: 15em;
-    opacity: 5%;
-    background-color: var(--first-color);
-    position: absolute;
-    top: -30%;
-    left: -50%;
-    border-radius: 60% 40% 30% 70%/60% 20% 70% 40%;
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
-.blobs-2{
-    height: 5em;
-    width: 5em;
-    opacity: 5%;
-    background-color: var(--first-color);
-    position: absolute;
-    top: 5%;
-    left: 40%;
-    border-radius: 60% 20% 30% 70%/60% 20% 70% 40%;
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
-.blobs-3{
-    height: 10em;
-    width: 10em;
-    opacity: 5%;
-    background-color: var(--first-color);
-    position: absolute;
-    top: -15%;
-    left: 200%;
-    border-radius: 30% 20% 50% 70%/60% 20% 70% 40%;
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
-.blobs-4{
-    height: 8em;
-    width: 8em;
-    opacity: 5%;
-    background-color: var(--first-color);
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    border-radius: 60% 40% 30% 70%/60% 20% 70% 40%;
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
 .first-image{
     height: 200px;
     width: 120px;
